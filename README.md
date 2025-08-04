@@ -1,99 +1,131 @@
-# LifeLine - AI Agent Platform
+# LifeLine - Personalized AI Agent Platform
 
-A personalized agentic AI platform where users can select different AI agents (strategists, assistants, therapists, mentors) to guide them in specific areas of life.
+A React Native mobile app powered by Expo that provides personalized AI agents for personal growth and life coaching.
 
 ## Features
 
-- 🤖 **Multiple AI Agents** - Specialized agents for different life areas
-- 💬 **Intelligent Chat** - Context-aware conversations with personality
-- 📱 **Mobile-First** - Cross-platform iOS and Android support
-- 🎯 **Daily Suggestions** - Smart agent recommendations
-- 📊 **Progress Tracking** - Monitor your growth journey
-- 🔒 **Privacy-Focused** - Your data stays secure
+### Core Functionality
+- **3-Tab Navigation**: Home, Chat, Profile
+- **5 AI Agents** with distinct personalities:
+  - Maya - Wellness Coach
+  - Alex - Productivity Strategist  
+  - Zoe - Relationship Guide
+  - Sam - Financial Advisor
+  - Leo - Creative Mentor
+- **Chat Interface** with OpenAI integration
+- **Local Storage** using AsyncStorage for message persistence
+- **No Authentication** required for MVP
+- **Clean UI** using React Native components
 
-## Tech Stack
+### Technical Features
+- **Error Handling** for all API calls and storage operations
+- **Loading States** and user feedback
+- **Offline Capability** with graceful error handling
+- **TypeScript** for type safety
+- **Proper Navigation** with React Navigation
 
-- **Frontend**: React Native + Expo
-- **Backend**: Supabase (PostgreSQL, Auth, Real-time)
-- **AI Integration**: OpenAI GPT-4 / Claude
-- **State Management**: Zustand
-- **Navigation**: React Navigation v6
-- **UI Framework**: NativeBase
+## Quick Start
 
-## Getting Started
+1. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-### Prerequisites
+2. **Configure OpenAI API (Optional)**
+   ```bash
+   cp .env.example .env
+   # Edit .env and add your OpenAI API key
+   ```
 
-- Node.js 18+ 
-- npm or yarn
-- Expo CLI
-- Supabase account
+3. **Start the Development Server**
+   ```bash
+   npm start
+   # or
+   expo start
+   ```
 
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/ValisAIAdmin/lifeline-app.git
-cd lifeline-app
-
-# Install dependencies
-npm install
-
-# Copy environment variables
-cp .env.example .env
-
-# Start the development server
-expo start
-```
-
-### Environment Setup
-
-Create a `.env` file with:
-
-```
-EXPO_PUBLIC_SUPABASE_URL=your_supabase_url
-EXPO_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-EXPO_PUBLIC_OPENAI_API_KEY=your_openai_api_key
-```
+4. **Run on Device/Simulator**
+   - Scan QR code with Expo Go app (iOS/Android)
+   - Press `i` for iOS simulator
+   - Press `a` for Android emulator
+   - Press `w` for web browser
 
 ## Project Structure
 
-- `/src/components` - Reusable UI components
-- `/src/screens` - App screens and navigation
-- `/src/services` - API and external service integrations
-- `/src/store` - State management
-- `/config` - Agent and prompt configurations
-- `/supabase` - Database migrations and functions
+```
+lifeline-app/
+├── src/
+│   ├── components/          # Reusable components
+│   ├── screens/            # Main app screens
+│   ├── services/           # API and storage services
+│   ├── types/              # TypeScript type definitions
+│   └── theme.ts            # App theme and styling
+├── config/
+│   └── agents.json         # AI agent configurations
+├── App.tsx                 # Main app component
+└── package.json           # Dependencies and scripts
+```
 
-## Development Roadmap
+## AI Agents
 
-### Phase 1: Foundation ✨
-- [x] Project setup and architecture
-- [ ] User authentication system
-- [ ] Database schema implementation
-- [ ] Core UI components
+The app includes 5 pre-configured AI agents:
 
-### Phase 2: Core Features 🚀
-- [ ] Agent discovery and selection
-- [ ] Chat interface with AI integration
-- [ ] User profiles and preferences
-- [ ] Chat history management
+1. **Maya (Wellness Coach)** - Health, nutrition, fitness, mental wellbeing
+2. **Alex (Productivity Strategist)** - Time management, goal setting, focus
+3. **Zoe (Relationship Guide)** - Communication, relationships, boundaries
+4. **Sam (Financial Advisor)** - Budgeting, investing, financial planning
+5. **Leo (Creative Mentor)** - Creativity, artistic skills, inspiration
 
-### Phase 3: Enhancement 💡
-- [ ] Daily recommendation engine
-- [ ] Push notifications
-- [ ] Analytics and insights
-- [ ] Beta testing program
+## Demo Mode
 
-### Phase 4: Launch 🎉
-- [ ] Performance optimization
-- [ ] App store deployment
-- [ ] Marketing and user acquisition
+The app works in demo mode without an OpenAI API key, providing mock responses to showcase functionality. To enable full AI capabilities:
 
-## Contributing
+1. Get an OpenAI API key from https://platform.openai.com/
+2. Add it to your `.env` file
+3. Restart the app
 
-We welcome contributions! Please read our [Contributing Guide](CONTRIBUTING.md) for details.
+## Development
+
+### Available Scripts
+
+- `npm start` - Start the development server
+- `npm run android` - Run on Android
+- `npm run ios` - Run on iOS  
+- `npm run web` - Run on web
+- `npm run lint` - Lint the code
+- `npm run type-check` - Run TypeScript checks
+
+### Building for Production
+
+```bash
+# Install EAS CLI
+npm install -g @expo/eas-cli
+
+# Build for Android
+npm run build:android
+
+# Build for iOS
+npm run build:ios
+```
+
+## Features Implemented
+
+- ✅ 3-tab navigation (Home, Chat, Profile)
+- ✅ AI agent selection with visual cards
+- ✅ Chat interface with message bubbles
+- ✅ Local message storage with AsyncStorage
+- ✅ Error boundaries and crash prevention
+- ✅ Loading states and typing indicators
+- ✅ Starter prompt suggestions
+- ✅ Clear chat functionality
+- ✅ Offline capability with fallback responses
+- ✅ TypeScript throughout
+- ✅ Clean, modern UI
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - see LICENSE file for details.
+
+## Support
+
+This is an MVP version designed to showcase core functionality. For production use, additional features like user authentication, cloud sync, and enhanced security would be recommended.
