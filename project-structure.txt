@@ -1,0 +1,54 @@
+lifeline-app/
+├── README.md
+├── package.json
+├── app.json
+├── babel.config.js
+├── metro.config.js
+├── .gitignore
+├── .env.example
+├── docs/
+│   ├── API.md
+│   ├── AGENTS.md
+│   ├── DATABASE.md
+│   └── DEPLOYMENT.md
+├── assets/
+│   ├── images/
+│   │   ├── agents/
+│   │   └── icons/
+│   └── fonts/
+├── src/
+│   ├── components/
+│   │   ├── common/
+│   │   ├── agents/
+│   │   ├── chat/
+│   │   └── ui/
+│   ├── screens/
+│   │   ├── onboarding/
+│   │   ├── home/
+│   │   ├── agents/
+│   │   ├── chat/
+│   │   └── profile/
+│   ├── services/
+│   │   ├── api/
+│   │   ├── auth/
+│   │   ├── database/
+│   │   └── ai/
+│   ├── store/
+│   │   ├── slices/
+│   │   └── index.js
+│   ├── utils/
+│   │   ├── constants.js
+│   │   ├── helpers.js
+│   │   └── validation.js
+│   ├── navigation/
+│   │   ├── AppNavigator.js
+│   │   └── TabNavigator.js
+│   └── types/
+│       └── index.ts
+├── supabase/
+│   ├── migrations/
+│   ├── functions/
+│   └── config.js
+└── config/
+    ├── agents.json
+    └── prompts.json
